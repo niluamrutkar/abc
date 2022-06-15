@@ -1,0 +1,49 @@
+#include<iostream.h>
+#include<conio.h>
+class test2
+class test1
+{
+  int a;
+  public:
+	 void getdata()
+	 {
+	  cout<<"Enter a=";
+	  cin>>a;
+	 }
+  friend void big(test1 t1,test2 t2);
+};
+class test2
+{
+ int b;
+ public:
+	void getdata()
+	{
+	 cout<<"Enter b=";
+	 cin>>b;
+	}
+ friend void big(test1 t1,test2 t2);
+};
+void big(test1 t1,test2 t2)
+{
+ if(t1.a>t2.b)
+ cout<<"a Is Greater Than b";
+ else if(t2.b>t1.a)
+ {
+ cout<<"b Is Greater Than a";
+ }
+ else
+ {
+ cout<<"Both Are Equals";
+}
+}
+void main()
+{
+clrscr();
+test1 t1;
+test2 t2;
+t1.getdata();
+t2.getdata();
+big(t1,t2);
+getch();
+}
+
